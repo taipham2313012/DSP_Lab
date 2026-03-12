@@ -1,20 +1,17 @@
 // ===================== EX 2 =====================
 n = -5:5;
 msignal = bool2s(n >= 0);
-figure(1); plot2d3(n, msignal, rect=[-5, 0, 5, 5]);
-title('Ex2: Unit Step u(n)'); xlabel('n'); ylabel('Amplitude');
-
+plot2d3(n, msignal);
 
 // ===================== EX 3 =====================
 n = -5:5;
 msignal = bool2s(n == 0);
-figure(2); plot2d3(n, msignal, rect=[-5, 0, 5, 5]);
-title('Ex3: Unit Impulse d(n)'); xlabel('n'); ylabel('Amplitude');
+plot2d3(n, msignal);
 
 // ===================== EX 4 =====================
 n = -5:5;
 ur = n .* bool2s(n >= 0);
-figure(3); plot2d3(n, ur, rect=[-5, 0, 5, 5]);
+figure(3); plot2d3(n, ur);
 title('Ex4: Unit Ramp ur(n)'); xlabel('n'); ylabel('Amplitude');
 
 // ===================== EX 5 =====================
@@ -85,11 +82,11 @@ ny3 = ny1 - 2; // -3:0
 y3 = 2 * y1;
 
 figure(7);
-subplot(2,1,1); plot2d3(nx8, x8); title("x(n)");
-subplot(2,1,2); plot2d3(ny1, y1, style=2); title("y1(n) = x(-n)");
+subplot(2,1,1); plot2d3(nx8, x8); title("x(n)"); xlabel('n'); ylabel('x(n)');
+subplot(2,1,2); plot2d3(ny1, y1, style=2); title("y1(n) = x(-n)"); xlabel('n'); ylabel('y1(n)');
 figure(8);
-subplot(2,1,1); plot2d3(nx8, x8); title("x(n)");
-subplot(2,1,2); plot2d3(ny2, x8, style=5); title("y2(n) = x(n+3)");
+subplot(2,1,1); plot2d3(nx8, x8); title("x(n)"); xlabel('n'); ylabel('x(n)');
+subplot(2,1,2); plot2d3(ny2, x8, style=5); title("y2(n) = x(n+3)"); xlabel('n'); ylabel('y2(n)');
 figure(9);
-subplot(2,1,1); plot2d3(nx8, x8); title("x(n)");
-subplot(2,1,2); plot2d3(ny3, y3, style=3); title("y3(n) = 2x(-n-2)");
+subplot(2,1,1); plot2d3(nx8, x8); title("x(n)"); xlabel('n'); ylabel('x(n)');
+subplot(2,1,2); plot2d3(ny3, y3, style=3); title("y3(n) = 2x(-n-2)"); xlabel('n'); ylabel('y3(n)');
